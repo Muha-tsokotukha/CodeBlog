@@ -1,0 +1,33 @@
+<div class="blogs" *ngFor="let blog of blogs">
+
+<div id="blog-{{blog.id}}" class="blog-item">
+	<img class="blog-item--img" src="img"  alt="">
+	<div class="blog-header">
+		<h3 >
+			<a (click)="viewed(blog)" [routerLink]="['/blog', blog.id]" href="">{{blog.title}}</a>
+		</h3>
+		<span class="link">
+			<img src="/images/dots.svg" alt="">
+			Еще
+			<ul class="dropdown">
+				<li [routerLink]="['/editblog', blog.id]"> <a >Редактировать</a> </li>
+				<li (click)="deleteBlog(blog)"><a class="danger">Удалить</a></li>
+			</ul>
+		</span>
+</div>
+	<p class="blog-desc">
+		{{blog.description}}
+	</p>
+
+	<div class="blog-info">
+		<span class="link">
+			<img src="/images/visibility.svg" alt="">
+			{{blog.views}}
+		</span>
+		<a  class="link" >
+			<img src="/images/person.svg" alt="">
+			{{blog.author.name}}
+		</a>
+		
+	</div>
+</div>
