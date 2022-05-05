@@ -14,6 +14,7 @@
 
         <a href="" *ngIf="logged">
             <img class="avatar" src="/images/avatar.png" alt="Avatar">
+			<a href="/logout" (click)="logout()">Выйти</a>
         </a>
         <div *ngIf="!logged" class="button-group">
             <a href="/register" routerLink="register" class="button">Регистрация</a>

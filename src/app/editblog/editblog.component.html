@@ -19,7 +19,7 @@
 				</button>
 			</fieldset>
 			<fieldset class="fieldset">
-				<textarea class="input input-textarea" name="description" id="" cols="30" rows="10" placeholder="Описание" [ngModel]="blog?.description" (ngModelChange)="blog?.description ? blog.description = $event : null"></textarea>
+				<textarea class="input input-textarea" name="description" id="" cols="30" rows="10" placeholder="Описание" [ngModel]="blog?.text" (ngModelChange)="blog?.text ? blog.text = $event : null"></textarea>
 			</fieldset>
 			<fieldset class="fieldset">
 				<button class="button" (click)="editblog()" type="button">Сохранить</button>

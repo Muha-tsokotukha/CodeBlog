@@ -11,7 +11,7 @@ import { NewblogComponent } from './newblog/newblog.component';
 import { BloglistComponent } from './bloglist/bloglist.component';
 import { EditblogComponent } from './editblog/editblog.component';
 import { BlogdetailsComponent } from './blogdetails/blogdetails.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,12 +22,14 @@ import { BlogdetailsComponent } from './blogdetails/blogdetails.component';
     NewblogComponent,
     BloglistComponent,
     EditblogComponent,
-    BlogdetailsComponent
+    BlogdetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

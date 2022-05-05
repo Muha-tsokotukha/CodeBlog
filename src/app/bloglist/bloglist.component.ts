@@ -25,7 +25,10 @@ export class BloglistComponent implements OnInit {
     this.blogService.getBlogs();
   }
   getBlogs(){
-    this.blogs = this.blogService.getBlogs();
+    this.blogService.getBlogs().subscribe((data)=>{
+      this.blogs = data;
+      console.log(this.blogs);
+    });
   }
   editblog(blog: any){
     this.blogService.deleteBlog(blog);

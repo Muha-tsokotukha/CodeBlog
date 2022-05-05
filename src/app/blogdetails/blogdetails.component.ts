@@ -15,19 +15,20 @@ export class BlogdetailsComponent implements OnInit {
   blog: Blog = {
     id: 1,
     title: "blog 1",
-    description: "description 1",
-    imageURL: "",
+    text: "description 1",
     author: {
       id: 1,
       name: "name name",
     },
-    views: 0
+    category: "1",
+    views: 0,
+    tags: "1"
   };
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(params => {
-        this.blog.id = params['id'];
-    });
-    this.blog = this.blogService.getBlog(this.blog.id);
+    // this.activatedRoute.params.subscribe(params => {
+    //     this.blog.id = params['id'];
+    // });
+    // this.blog = this.blogService.getBlog(this.blog.id);
   }
 
 }

@@ -1,13 +1,14 @@
 export interface Blog {
 	id: number;
 	title: string;
-	description: string;
-	imageURL: string;
+	text: string;
 	author: {
 		id: number;
 		name: string;
 	};
 	views: number;
+	category: string;
+	tags: string;
 }
 
 export let blogs = [

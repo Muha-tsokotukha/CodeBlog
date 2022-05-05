@@ -9,10 +9,12 @@ import { BlogService } from '../blog.service';
 export class HeaderComponent implements OnInit {
 
   constructor(private blogService: BlogService) { }
-  logged: boolean = false;
+  logged: boolean=false;
   ngOnInit(): void {
     this.logged = this.blogService.logged;
     console.log(this.logged);
   }
-
+  logout(){
+    this.logged = false;
+  }
 }
